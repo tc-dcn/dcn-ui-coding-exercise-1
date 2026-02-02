@@ -1,28 +1,56 @@
 <section class="home">
-    <h2>Welcome to the Angular Coding Challenge!</h2>
-    <p>
-        This is a small demo app to showcase your Angular skills.
-        You can navigate to the <a routerLink="/items">Items</a> page to view the list of products.
-    </p>
+    <h2>Welcome to Session #1: Rendering a list of items</h2>
+
+    <p>Welcome! This is a 30–45 minute coding challenge that recreates a small product catalog.  It is designed to test your Angular skills, including:
+    <ul>
+        <li>Building components to match a UX Design</li>
+        <li>Ensuring responsiveness website</li>
+        <li>Standalone components (Angular 21)</li>
+        <li>TypeScript and typing</li>
+        <li>Angular routing</li>
+        <li>Async data handling with `HttpClient`</li>
+    </ul>
+
+    <p>You will work with a small app that displays a list of items and their details.  Your task is to extend the app with filtering and UI improvements.</p>
 
     <div class="cta">
-        <a routerLink="/items" class="btn">Go to Items</a>
+        <p>Navigate to the <a routerLink="/items">Items</a> page to see the product list.</p>
+        <a routerLink="/items" class="btn">View Items</a>
     </div>
 
     <hr>
 
     <h3>UI Inspiration</h3>
-    <p>Here are two examples of product pages for inspiration:</p>
+    <p>To give you some inspiration for the UI, here are two examples:</p>
+    <p>Click on a preview image to see it full size.</p>
 
     <div class="inspiration-images">
         <div class="image-card">
-            <h4>Product Listing Page</h4>
-            <img src="../../assets/images/readme/item-list.png" alt="Product Listing Page" height="1024" width="1536">
+            <h4>Item Listing Page</h4>
+            <div class="image-wrapper">
+                <img
+                        src="assets/images/readme/item-list.png"
+                        alt="Product Listing Page"
+                        (click)="openFullSize('assets/images/readme/item-list.png')"
+                >
+            </div>
         </div>
 
         <div class="image-card">
-            <h4>Product Detail Page</h4>
-            <img src="../../assets/images/readme/item-detail.png" alt="Product Detail Page" height="1024" width="1536">
+            <h4>Item Detail Page</h4>
+            <div class="image-wrapper">
+                <img
+                        src="assets/images/readme/item-detail.png"
+                        alt="Product Detail Page"
+                        (click)="openFullSize('assets/images/readme/item-detail.png')"
+                >
+            </div>
         </div>
+    </div>
+
+
+    <!-- Full-size image modal -->
+    <div class="modal" *ngIf="fullSizeImage" (click)="closeFullSize()">
+        <img [src]="fullSizeImage" alt="Full Size" class="full-size-image">
     </div>
 </section>

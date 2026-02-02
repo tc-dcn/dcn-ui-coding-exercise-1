@@ -6,11 +6,4 @@
         [(ngModel)]="filter"
 />
 
-<ul>
-    <li *ngFor="let item of items$ | async">
-        <a [routerLink]="['/items', item.id]">
-            {{ item.name }} - {{ item.category }}
-            <span *ngIf="!item.inStock" class="out-of-stock">(Out of Stock)</span>
-        </a>
-    </li>
-</ul>
+<!-- IMPLEMENT LIST OF ITEMS -->

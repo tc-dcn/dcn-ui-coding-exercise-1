@@ -26,13 +26,18 @@
             }
           },
           "options": {
-            "assets": [],
+            "assets": [
+              "src/assets"
+            ],
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "outputPath": "dist/demo",
+            "outputPath": "dist",
             "polyfills": ["zone.js"],
             "scripts": [],
             "styles": ["src/styles/styles.scss"],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/styles", "node_modules"]
+            },
             "tsConfig": "tsconfig.app.json"
           }
         },

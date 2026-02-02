@@ -1,23 +1,5 @@
 <a routerLink="/items">← Back to items</a>
 
-<section *ngIf="item$ | async as item; else loading">
-    <h2>{{ item.name }}</h2>
+<!-- IMPLEMENT ITEM DETAIL -->
 
-    <p><strong>Category:</strong> {{ item.category }}</p>
-    <p><strong>Price:</strong> {{ item.price | currency }}</p>
-
-    <p>
-        <strong>Status:</strong>
-        <span *ngIf="item.inStock; else outOfStock">In Stock</span>
-    </p>
-
-    <ng-template #outOfStock>
-        <span class="out-of-stock">Out of Stock</span>
-    </ng-template>
-
-    <p>{{ item.description }}</p>
-</section>
-
-<ng-template #loading>
-    <p>Loading item details…</p>
-</ng-template>
+<p>Loading item details…</p>

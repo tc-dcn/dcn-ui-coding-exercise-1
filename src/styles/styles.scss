@@ -1,19 +1,14 @@
-/* Import font definitions */
-@import './fonts';
+@import "normalize.scss/normalize";
+@import 'fonts';
+@import "mixins";
 
 /* Global CSS reset / base styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   background-color: #f9f9f9;
   color: #222;
-  line-height: 1.5;
+  line-height: 1.2;
 }
 
 a {
@@ -25,28 +20,4 @@ a {
   }
 }
 
-header {
-  background-color: #fff;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 
-  h1 {
-    font-weight: 600;
-    font-size: 1.5rem;
-  }
-
-  nav a {
-    margin-left: 1rem;
-    font-weight: 500;
-  }
-}
-
-main {
-  padding: 2rem;
-}
-
-/* Utility classes */
-.out-of-stock {
-  color: #dc3545;
-  font-weight: 600;
-}
